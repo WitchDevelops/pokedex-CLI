@@ -28,7 +28,7 @@ export const initState = (): State => {
      return {
         readline: rl,
         commands: commands,
-        pokeApi: new PokeAPI(),
+        pokeApi: new PokeAPI(300000),
         nextLocationsURL: '',
         prevLocationsURL: ''
     };
