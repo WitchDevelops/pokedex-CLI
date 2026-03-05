@@ -19,10 +19,11 @@ export const startREPL = (state: State) => {
         } else {
             const commandName = userInput[0];
             const command = state.commands[commandName];
+            const args = userInput.slice(1);
             
             if (command) {
                 try {
-                    await command.callback(state);
+                    await command.callback(state, ...args);
                 } catch (error) {
                     console.error(`Error executing command '${commandName}':`, error);
                 }
