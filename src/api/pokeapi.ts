@@ -108,4 +108,9 @@ export type PokemonEncounter = {
 export type Pokemon = {
     base_experience: number,
     name: string;
+    id: number;
+    height: number;
+    weight: number;
+    types: { slot: number, type: { name: string, url: string } }[];
+    stats: { base_stat: number, stat: { name: string, url: string } }[];
 }
