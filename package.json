@@ -10,7 +10,7 @@
     "dev": "npx tsc && node dist/main.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dominika Wojewska",
   "license": "ISC",
   "description": "",
   "devDependencies": {
