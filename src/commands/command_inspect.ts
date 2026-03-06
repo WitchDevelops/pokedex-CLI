@@ -2,7 +2,8 @@ import type { State } from "../state.js";
 
 export const commandInspect = async (state: State, ...args: string[]) => {
     if (args.length !== 1) {
-        throw new Error("you must provide a pokemon name");
+        console.log("you must provide a pokemon name");
+        return;
     }
 
     let pokemonName = args[0];
@@ -10,7 +11,7 @@ export const commandInspect = async (state: State, ...args: string[]) => {
     const pokemon = state.caughtPokemon[pokemonName];
     if (!pokemon) {
         console.log(`You haven't caught ${pokemonName} yet!`);
-        throw new Error("you have not caught that pokemon");
+        return;
     }
 
     console.log(`Name: ${pokemon.name}`);
